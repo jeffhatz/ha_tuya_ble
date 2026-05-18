@@ -10,6 +10,7 @@ from homeassistant.components.valve import (
     ValveDeviceClass,
     ValveEntity,
     ValveEntityDescription,
+    ValveEntityFeature,
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
@@ -83,6 +84,9 @@ class TuyaBLEValve(TuyaBLEEntity, ValveEntity):
     ) -> None:
         super().__init__(hass, coordinator, device, product, mapping.description)
         self._mapping = mapping
+        self._attr_supported_features = (
+            ValveEntityFeature.OPEN | ValveEntityFeature.CLOSE
+        )
         self.entity_id = generate_entity_id(
             "valve.{}", self._attr_unique_id, hass=hass
         )
