@@ -22,7 +22,7 @@ from homeassistant.const import CONF_ADDRESS
 from homeassistant.core import callback
 from homeassistant.data_entry_flow import FlowHandler, FlowResult
 
-from homeassistant.components.tuya.const import (
+from .const import (
     CONF_ACCESS_ID,
     CONF_ACCESS_SECRET,
     CONF_APP_TYPE,
@@ -37,13 +37,9 @@ from homeassistant.components.tuya.const import (
     TUYA_RESPONSE_MSG,
     TUYA_RESPONSE_SUCCESS,
     TUYA_SMART_APP,
-)
-
-from .tuya_ble import SERVICE_UUID, TuyaBLEDeviceCredentials
-
-from .const import (
     DOMAIN,
 )
+from .tuya_ble import SERVICE_UUID, TuyaBLEDeviceCredentials
 from .devices import TuyaBLEData, get_device_readable_name
 from .cloud import HASSTuyaBLEDeviceManager
 

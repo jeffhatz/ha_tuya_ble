@@ -13,12 +13,9 @@ from homeassistant.components.number import (
 from homeassistant.components.number.const import NumberDeviceClass, NumberMode
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
-    CONCENTRATION_PARTS_PER_MILLION,
     PERCENTAGE,
-    TIME_MINUTES,
-    TIME_SECONDS,
-    VOLUME_MILLILITERS,
     UnitOfTemperature,
+    UnitOfTime,
 )
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity import EntityCategory
@@ -31,6 +28,11 @@ from .devices import TuyaBLEData, TuyaBLEEntity, TuyaBLEProductInfo
 from .tuya_ble import TuyaBLEDataPointType, TuyaBLEDevice
 
 _LOGGER = logging.getLogger(__name__)
+
+CONCENTRATION_PARTS_PER_MILLION = "ppm"
+VOLUME_MILLILITERS = "mL"
+TIME_MINUTES = UnitOfTime.MINUTES
+TIME_SECONDS = UnitOfTime.SECONDS
 
 TuyaBLENumberGetter = (
     Callable[["TuyaBLENumber", TuyaBLEProductInfo], float | None] | None

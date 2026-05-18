@@ -14,11 +14,7 @@ from homeassistant.components.sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
-    CONCENTRATION_PARTS_PER_MILLION,
     PERCENTAGE,
-    SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
-    TEMP_CELSIUS,
-    VOLUME_MILLILITERS,
     UnitOfTemperature,
     UnitOfTime
 )
@@ -44,6 +40,9 @@ from .tuya_ble import TuyaBLEDataPointType, TuyaBLEDevice
 _LOGGER = logging.getLogger(__name__)
 
 SIGNAL_STRENGTH_DP_ID = -1
+CONCENTRATION_PARTS_PER_MILLION = "ppm"
+SIGNAL_STRENGTH_DECIBELS_MILLIWATT = "dBm"
+VOLUME_MILLILITERS = "mL"
 
 
 TuyaBLESensorIsAvailable = Callable[["TuyaBLESensor", TuyaBLEProductInfo], bool] | None
