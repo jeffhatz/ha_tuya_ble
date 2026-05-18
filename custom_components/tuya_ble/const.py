@@ -47,6 +47,7 @@ class TuyaCountry:
     name: str
     country_code: str
     endpoint: str
+    alpha_2: str
 
 
 TUYA_ENDPOINT_CHINA: Final = "https://openapi.tuyacn.com"
@@ -55,15 +56,15 @@ TUYA_ENDPOINT_EUROPE: Final = "https://openapi.tuyaeu.com"
 TUYA_ENDPOINT_INDIA: Final = "https://openapi.tuyain.com"
 
 TUYA_COUNTRIES: Final = [
-    TuyaCountry("China", "86", TUYA_ENDPOINT_CHINA),
-    TuyaCountry("France", "33", TUYA_ENDPOINT_EUROPE),
-    TuyaCountry("Germany", "49", TUYA_ENDPOINT_EUROPE),
-    TuyaCountry("India", "91", TUYA_ENDPOINT_INDIA),
-    TuyaCountry("Italy", "39", TUYA_ENDPOINT_EUROPE),
-    TuyaCountry("Netherlands", "31", TUYA_ENDPOINT_EUROPE),
-    TuyaCountry("Spain", "34", TUYA_ENDPOINT_EUROPE),
-    TuyaCountry("United Kingdom", "44", TUYA_ENDPOINT_EUROPE),
-    TuyaCountry("United States", "1", TUYA_ENDPOINT_AMERICA),
+    TuyaCountry("China", "86", TUYA_ENDPOINT_CHINA, "CN"),
+    TuyaCountry("France", "33", TUYA_ENDPOINT_EUROPE, "FR"),
+    TuyaCountry("Germany", "49", TUYA_ENDPOINT_EUROPE, "DE"),
+    TuyaCountry("India", "91", TUYA_ENDPOINT_INDIA, "IN"),
+    TuyaCountry("Italy", "39", TUYA_ENDPOINT_EUROPE, "IT"),
+    TuyaCountry("Netherlands", "31", TUYA_ENDPOINT_EUROPE, "NL"),
+    TuyaCountry("Spain", "34", TUYA_ENDPOINT_EUROPE, "ES"),
+    TuyaCountry("United Kingdom", "44", TUYA_ENDPOINT_EUROPE, "GB"),
+    TuyaCountry("United States", "1", TUYA_ENDPOINT_AMERICA, "US"),
 ]
 
 BATTERY_STATE_LOW: Final = "low"
