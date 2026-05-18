@@ -300,6 +300,13 @@ devices_database: dict[str, TuyaBLECategoryInfo] = {
             ),
         },
     ),
+    "sfkzq": TuyaBLECategoryInfo(
+        products={
+            "1fcnd8xk": TuyaBLEProductInfo(  # device product_id
+                name="Valve Controller",
+            ),
+        },
+    ),
 }
 
 

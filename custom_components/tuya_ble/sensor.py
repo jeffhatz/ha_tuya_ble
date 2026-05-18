@@ -305,6 +305,13 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
             ],
         },
     ),
+    "sfkzq": TuyaBLECategorySensorMapping(
+        products={
+            "1fcnd8xk": [  # Valve Controller
+                TuyaBLEBatteryMapping(dp_id=7),
+            ],
+        },
+    ),
 }
 
 

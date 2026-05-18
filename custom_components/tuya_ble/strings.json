@@ -208,6 +208,11 @@
           "name": "Irrigation valve"
       }    
     },
+    "valve": {
+      "valve": {
+        "name": "Valve"
+      }
+    },
     "text": {
       "program": {
         "name": "Program: position[/time];..."

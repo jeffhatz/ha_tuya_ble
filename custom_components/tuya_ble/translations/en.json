@@ -208,6 +208,11 @@
                 "name": "Window Check"
             }
         },
+        "valve": {
+            "valve": {
+                "name": "Valve"
+            }
+        },
         "text": {
             "program": {
                 "name": "Program: position[/time];..."
